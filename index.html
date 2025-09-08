@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Ahmed Hkm — .NET Web Developer</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+  <link rel="icon" href="assets/ahmed.jpg" type="image/jpeg"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <!-- Nav -->
+  <header class="nav">
+    <div class="container row">
+      <div class="logo">
+        <span class="dot"></span>
+        <span>Ahmed Hkm</span>
+      </div>
+      <!-- زر القائمة للموبايل -->
+      <button class="menu-toggle" aria-label="Menu" onclick="document.querySelector('.menu').classList.toggle('active')">☰</button>
+      <nav class="menu">
+        <a href="#home" class="active" onclick="smoothScrollTo('#home')">Home</a>
+        <a href="#about" onclick="smoothScrollTo('#about')">About Me</a>
+        <a href="#skills" onclick="smoothScrollTo('#skills')">Skills</a>
+        <a href="#projects" onclick="smoothScrollTo('#projects')">Projects</a>
+        <a href="#testimonials" onclick="smoothScrollTo('#testimonials')">Testimonials</a>
+        <a href="#contact" onclick="smoothScrollTo('#contact')">Contact</a>
+        <button id="themeToggle" class="theme-toggle" aria-label="Theme Toggle">🌓</button>
+      </nav>
+    </div>
+  </header>
+
+   <!-- Hero -->
+  <section id="home" class="hero">
+    <canvas id="particles"></canvas>
+    <div class="container hero-wrap">
+      <div class="hero-card reveal">
+        <div class="tag">.NET Web Developer | Full-Stack Developer</div>
+        <h1>Ahmed Hkm</h1>
+        <h2>"Coding Ideas into Reality"</h2>
+        <p class="lead">I design and develop professional and secure web applications using .NET Core and ASP.NET MVC, with a strong focus on aesthetics and usability.</p>
+        <div style="display:flex; gap:12px; margin-top:14px; flex-wrap:wrap">
+          <a class="btn btn-primary" href="#projects" onclick="smoothScrollTo('#projects')">My Projects</a>
+          <a class="btn" href="#contact" onclick="smoothScrollTo('#contact')">Contact</a>
+        </div>
+        <div class="kpis">
+          <div class="kpi"><div class="num">5+</div><div class="muted">Projects</div></div>
+          <div class="kpi"><div class="num">5+</div><div class="muted">Basic techniques</div></div>
+          <div class="kpi"><div class="num">100%</div><div class="muted">Customer satisfaction</div></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <img src="assets/ahmed.jpg" alt="Ahmed Hkm" style="border-radius:20px; border:1px solid var(--border); box-shadow:var(--shadow)">
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>About Me</h2>
+        
+      </div>
+      <div class="grid" style="grid-template-columns: 1fr 1fr;">
+        <div class="reveal">
+          <div class="card">
+            <div class="body">
+              <p>أنا مطوّر ويب متخصص في تقنيات <strong>.NET Core</strong> و<strong>ASP.NET MVC</strong> مع خبرة في بناء تطبيقات ويب احترافية، متجاوبة، وآمنة. لدي خبرة في تطوير واجهات مستخدم جذابة باستخدام <strong>HTML, CSS, JavaScript, Bootstrap و React</strong>، بالإضافة إلى إدارة قواعد البيانات باستخدام <strong>SQL Server و Entity Framework</strong>. هدفي هو تحويل أفكار العملاء إلى حلول رقمية فعّالة وسهلة الاستخدام.</p>
+              <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:10px">
+                <span class="tag">Coding Ideas into Reality</span>
+                <span class="tag">أمان & أداء</span>
+                <span class="tag">تجربة مستخدم</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="card">
+            <div class="body">
+              <h3 style="margin-top:0">Job title</h3>
+              <p>.NET Web Developer | Full-Stack Developer</p>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Skills</h2>
+        
+      </div>
+
+      <div class="grid" style="grid-template-columns: repeat(3, 1fr)">
+        <div class="card reveal">
+          <div class="body">
+            <div class="title">Backend</div>
+            <p class="muted">ASP.NET Core, ASP.NET MVC, C#</p>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="body">
+            <div class="title">Frontend</div>
+            <p class="muted">HTML5, CSS3, JavaScript, Bootstrap, React</p>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="body">
+            <div class="title">Database</div>
+            <p class="muted">SQL Server, Entity Framework</p>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="body">
+            <div class="title">Tools</div>
+            <p class="muted">Git, Postman, Visual Studio</p>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="body">
+            <div class="title">Additional Skills</div>
+            <p class="muted">Problem Solving ,Teamwork & Effective Communication,Project Management with Agile/Scrum</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Projects</h2>
+        <span class="sub">Featured Projects</span>
+      </div>
+      <div class="filters">
+        <button class="btn btn-primary" onclick="filterProjects('all')">All</button>
+        <button class="btn" onclick="filterProjects('api')">APIs</button>
+        <button class="btn" onclick="filterProjects('web')">Web</button>
+      </div>
+
+      <div class="grid projects">
+        <!-- Project 1 -->
+        <article class="project card reveal" data-tag="api">
+          <img src="assets/ecom.jpg" alt="E-Commerce RESTful API">
+          <div class="body">
+            <div class="title">E-Commerce RESTful API</div>
+            <p class="muted">Personal Project — Developing an e-commerce API using ASP.NET Core Web API and managing a SQL Server database.</p>
+            <p><strong>Technologies:</strong> ASP.NET Core, EF Core, SQL Server</p>
+            <p><strong>Result:</strong> A scalable system enabling users to manage products, orders, and inventory</p>
+            <div style="display:flex; gap:10px; flex-wrap:wrap">
+              <a class="btn" href="https://github.com/Ahmedhkm182/Ecom-API" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project card reveal" data-tag="web">
+          <img src="assets/port.png" alt="Portfolio Website">
+          <div class="body">
+            <div class="title">Portfolio Website</div>
+            <p class="muted"> Designed and developed a responsive personal portfolio website using HTML, CSS, Bootstrap, and JavaScript.</p>
+            <p><strong>Result:</strong> A stylish interface showcasing skills, projects, and a simple contact form</p>
+            <div style="display:flex; gap:10px; flex-wrap:wrap">
+              <a class="btn" href="https://yourportfolio.com" target="_blank" rel="noopener"> Visit</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project card reveal" data-tag="web">
+          <img src="assets/task.png" alt="Task Management System">
+          <div class="body">
+            <div class="title">Task Management System</div>
+            <p class="muted">Small Business —  A web application for managing tasks and projects with multi-user permissions.</p>
+            <p><strong>Technologies:</strong> ASP.NET MVC, SQL Server, jQuery</p>
+            <p><strong>Result:</strong> Increased work efficiency by 30% within the company</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Testimonials</h2>
+       
+      </div>
+      <div class="slider">
+        <div class="card slide reveal">
+          <div class="body">
+            <div class="stars">★★★★★</div>
+            <p>"Ahmed delivered exactly what we needed, ahead of schedule, and with excellent communication."</p>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contact</h2>
+        
+      </div>
+      <div class="grid" style="grid-template-columns:1.1fr .9fr">
+        <form class="card body form reveal" onsubmit="event.preventDefault(); alert('تم إرسال الرسالة بنجاح (نموذج تجريبي)');">
+          <input class="input" type="text" name="name" placeholder="Name"/>
+          <input class="input" type="email" name="email" placeholder="Email"/>
+          <textarea class="input" name="message" placeholder="Message"></textarea>
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+        <div class="reveal">
+          <div class="card">
+            <div class="body">
+              <h3 style="margin-top:0">Contact</h3>
+              <p><strong>Email:</strong> <a href="mailto:ahmedhekam0@gmail.com">ahmedhekam0@gmail.com</a>
+              <br><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/ahmedhkm" target="_blank" rel="noopener">linkedin.com/in/ahmedhkm</a>
+              <br><strong>GitHub:</strong> <a href="https://github.com/ahmedhkm182" target="_blank" rel="noopener">github.com/ahmedhkm182</a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<footer class="footer">
+    <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap">
+      <div class="muted">© <span id="y"></span> Ahmed Hkm — جميع الحقوق محفوظة.</div>
+      <div style="display:flex; gap:8px; flex-wrap:wrap">
+        <span class="tag">.NET</span>
+        <span class="tag">ASP.NET</span>
+        <span class="tag">SQL Server</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+
+</body>
+</html>
