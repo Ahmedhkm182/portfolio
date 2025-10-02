@@ -97,3 +97,16 @@ function filterProjects(tag){
     p.style.display = (tag==='all' || p.dataset.tag?.includes(tag)) ? '' : 'none';
   });
 }
+
+ document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+     emailjs.init('_eIalcMFNpLWfmk9u');
+    emailjs.sendForm('service_5hdxk1s', 'template_eqrhmn9', this)
+      .then(() => {
+        alert('تم إرسال الرسالة بنجاح!');
+        this.reset(); // يمسح الفورم بعد الإرسال
+      }, (error) => {
+        alert('حدث خطأ، حاول مرة أخرى.');
+        console.log(error);
+      });
+  });
