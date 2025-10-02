@@ -25,6 +25,7 @@
         <a href="#projects" onclick="smoothScrollTo('#projects')">Projects</a>
         <a href="#testimonials" onclick="smoothScrollTo('#testimonials')">Testimonials</a>
         <a href="#contact" onclick="smoothScrollTo('#contact')">Contact</a>
+         <a href="assets/AhmedHkm_CV.pdf" download class="btn btn-primary">Download CV</a>
         <button id="themeToggle" class="theme-toggle" aria-label="Theme Toggle">🌓</button>
       </nav>
     </div>
@@ -39,10 +40,15 @@
         <h1>Ahmed Hkm</h1>
         <h2>"Coding Ideas into Reality"</h2>
         <p class="lead">I design and develop professional and secure web applications using .NET Core and ASP.NET MVC, with a strong focus on aesthetics and usability.</p>
-        <div style="display:flex; gap:12px; margin-top:14px; flex-wrap:wrap">
-          <a class="btn btn-primary" href="#projects" onclick="smoothScrollTo('#projects')">My Projects</a>
-          <a class="btn" href="#contact" onclick="smoothScrollTo('#contact')">Contact</a>
-        </div>
+       <div style="display:flex; gap:12px; margin-top:14px; flex-wrap:wrap">
+  <a class="btn btn-primary" href="#projects" onclick="smoothScrollTo('#projects')">My Projects</a>
+  <a class="btn" href="#contact" onclick="smoothScrollTo('#contact')">Contact</a>
+  <a class="btn btn-primary" href="assets/AhmedHkm_CV.pdf" target="_blank" download>
+  Download CV
+</a>
+
+</div>
+
         <div class="kpis">
           <div class="kpi"><div class="num">5+</div><div class="muted">Projects</div></div>
           <div class="kpi"><div class="num">5+</div><div class="muted">Basic techniques</div></div>
@@ -66,11 +72,12 @@
         <div class="reveal">
           <div class="card">
             <div class="body">
-              <p>أنا مطوّر ويب متخصص في تقنيات <strong>.NET Core</strong> و<strong>ASP.NET MVC</strong> مع خبرة في بناء تطبيقات ويب احترافية، متجاوبة، وآمنة. لدي خبرة في تطوير واجهات مستخدم جذابة باستخدام <strong>HTML, CSS, JavaScript, Bootstrap و React</strong>، بالإضافة إلى إدارة قواعد البيانات باستخدام <strong>SQL Server و Entity Framework</strong>. هدفي هو تحويل أفكار العملاء إلى حلول رقمية فعّالة وسهلة الاستخدام.</p>
+              <p>I am a web developer specializing in <strong>.NET Core</strong> and <strong>ASP.NET MVC</strong>, with experience in building professional, responsive, and secure web applications. I have expertise in developing attractive user interfaces using <strong>HTML, CSS, JavaScript, Bootstrap, and React</strong>, as well as managing databases with <strong>SQL Server and Entity Framework</strong>. My goal is to transform client ideas into effective and user-friendly digital solutions.
+</p>
               <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:10px">
                 <span class="tag">Coding Ideas into Reality</span>
-                <span class="tag">أمان & أداء</span>
-                <span class="tag">تجربة مستخدم</span>
+                <span class="tag">Security & Performance</span>
+                <span class="tag">User Experience (UX) </span>
               </div>
             </div>
           </div>
@@ -167,7 +174,7 @@
             <p class="muted"> Designed and developed a responsive personal portfolio website using HTML, CSS, Bootstrap, and JavaScript.</p>
             <p><strong>Result:</strong> A stylish interface showcasing skills, projects, and a simple contact form</p>
             <div style="display:flex; gap:10px; flex-wrap:wrap">
-              <a class="btn" href="https://yourportfolio.com" target="_blank" rel="noopener"> Visit</a>
+              <a class="btn" href="https://ahmedhkm182.github.io/portfolio/" target="_blank" rel="noopener"> Visit</a>
             </div>
           </div>
         </article>
@@ -206,33 +213,36 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="section">
-    <div class="container">
-      <div class="section-title">
-        <h2>Contact</h2>
-        
-      </div>
-      <div class="grid" style="grid-template-columns:1.1fr .9fr">
-        <form class="card body form reveal" onsubmit="event.preventDefault(); alert('تم إرسال الرسالة بنجاح (نموذج تجريبي)');">
-          <input class="input" type="text" name="name" placeholder="Name"/>
-          <input class="input" type="email" name="email" placeholder="Email"/>
-          <textarea class="input" name="message" placeholder="Message"></textarea>
-          <button class="btn btn-primary" type="submit">Submit</button>
-        </form>
-        <div class="reveal">
-          <div class="card">
-            <div class="body">
-              <h3 style="margin-top:0">Contact</h3>
-              <p><strong>Email:</strong> <a href="mailto:ahmedhekam0@gmail.com">ahmedhekam0@gmail.com</a>
-              <br><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/ahmedhkm" target="_blank" rel="noopener">linkedin.com/in/ahmedhkm</a>
-              <br><strong>GitHub:</strong> <a href="https://github.com/ahmedhkm182" target="_blank" rel="noopener">github.com/ahmedhkm182</a>
-              
-            </div>
+<section id="contact" class="section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Contact</h2>
+    </div>
+    <div class="grid" style="grid-template-columns:1.1fr .9fr">
+      <form class="card body form reveal" id="contactForm">
+  <input class="input" type="text" name="name" placeholder="Name" required/>
+  <input class="input" type="email" name="email" placeholder="Email" required/>
+  <textarea class="input" name="message" placeholder="Message" required></textarea>
+  <button class="btn btn-primary" type="submit">Submit</button>
+</form>
+
+      <div class="reveal">
+        <div class="card">
+          <div class="body">
+            <h3 style="margin-top:0">Contact</h3>
+            <p><strong>WhatsApp:</strong> <a href="https://wa.me/201234567890" target="_blank" rel="noopener">Chat with me</a>
+            <br><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/ahmedhkm" target="_blank" rel="noopener">linkedin.com/in/ahmedhkm</a>
+            <br><strong>GitHub:</strong> <a href="https://github.com/ahmedhkm182" target="_blank" rel="noopener">github.com/ahmedhkm182</a></p>
+             <a class="btn btn-primary" href="https://wa.me/201004743689" target="_blank">
+              Chat on WhatsApp
+            </a>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
 <footer class="footer">
     <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap">
@@ -247,6 +257,12 @@
 
   <script src="script.js"></script>
   <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("YOUR_USER_ID"); // حط الـ User ID من حسابك
+  })();
+</script>
 
 </body>
 </html>
